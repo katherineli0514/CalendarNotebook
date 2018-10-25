@@ -8,13 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		88017195217D6119000C50AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88017194217D6119000C50AA /* AppDelegate.swift */; };
-		88017197217D6119000C50AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88017196217D6119000C50AA /* ViewController.swift */; };
+		88017197217D6119000C50AA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88017196217D6119000C50AA /* HomeViewController.swift */; };
 		8801719A217D6119000C50AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88017198217D6119000C50AA /* Main.storyboard */; };
 		8801719D217D6119000C50AA /* CalendarNotebook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8801719B217D6119000C50AA /* CalendarNotebook.xcdatamodeld */; };
 		8801719F217D611A000C50AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8801719E217D611A000C50AA /* Assets.xcassets */; };
 		880171A2217D611A000C50AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 880171A0217D611A000C50AA /* LaunchScreen.storyboard */; };
 		880171AD217D611A000C50AA /* CalendarNotebookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880171AC217D611A000C50AA /* CalendarNotebookTests.swift */; };
 		880171B8217D611A000C50AA /* CalendarNotebookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880171B7217D611A000C50AA /* CalendarNotebookUITests.swift */; };
+		880171C6217EC5FF000C50AA /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880171C5217EC5FF000C50AA /* CalendarViewController.swift */; };
+		880171C8217EC9C0000C50AA /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880171C7217EC9C0000C50AA /* CalendarCollectionViewCell.swift */; };
+		880171CA218175B0000C50AA /* CalendarCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880171C9218175B0000C50AA /* CalendarCollectionViewLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +40,7 @@
 /* Begin PBXFileReference section */
 		88017191217D6119000C50AA /* CalendarNotebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalendarNotebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88017194217D6119000C50AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		88017196217D6119000C50AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		88017196217D6119000C50AA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		88017199217D6119000C50AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8801719C217D6119000C50AA /* CalendarNotebook.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CalendarNotebook.xcdatamodel; sourceTree = "<group>"; };
 		8801719E217D611A000C50AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +52,9 @@
 		880171B3217D611A000C50AA /* CalendarNotebookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalendarNotebookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		880171B7217D611A000C50AA /* CalendarNotebookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarNotebookUITests.swift; sourceTree = "<group>"; };
 		880171B9217D611A000C50AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		880171C5217EC5FF000C50AA /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		880171C7217EC9C0000C50AA /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
+		880171C9218175B0000C50AA /* CalendarCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +106,10 @@
 			isa = PBXGroup;
 			children = (
 				88017194217D6119000C50AA /* AppDelegate.swift */,
-				88017196217D6119000C50AA /* ViewController.swift */,
+				88017196217D6119000C50AA /* HomeViewController.swift */,
+				880171C5217EC5FF000C50AA /* CalendarViewController.swift */,
+				880171C9218175B0000C50AA /* CalendarCollectionViewLayout.swift */,
+				880171C7217EC9C0000C50AA /* CalendarCollectionViewCell.swift */,
 				88017198217D6119000C50AA /* Main.storyboard */,
 				8801719E217D611A000C50AA /* Assets.xcassets */,
 				880171A0217D611A000C50AA /* LaunchScreen.storyboard */,
@@ -259,9 +268,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88017197217D6119000C50AA /* ViewController.swift in Sources */,
+				880171C6217EC5FF000C50AA /* CalendarViewController.swift in Sources */,
+				88017197217D6119000C50AA /* HomeViewController.swift in Sources */,
 				8801719D217D6119000C50AA /* CalendarNotebook.xcdatamodeld in Sources */,
 				88017195217D6119000C50AA /* AppDelegate.swift in Sources */,
+				880171CA218175B0000C50AA /* CalendarCollectionViewLayout.swift in Sources */,
+				880171C8217EC9C0000C50AA /* CalendarCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
